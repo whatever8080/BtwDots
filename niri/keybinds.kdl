@@ -1,0 +1,71 @@
+binds {
+    // #"Application"
+    Mod+T hotkey-overlay-title="终端" { spawn "wezterm"; }
+    Mod+E hotkey-overlay-title="文件夹" { spawn "dolphin"; }
+    Mod+B hotkey-overlay-title="浏览器" { spawn "google-chrome-stable"; }
+
+    // window or column related
+    Mod+Q { close-window; }
+    Mod+C { center-window; }
+    
+    // #"Focus around"
+    Mod+Left { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up { focus-window-up; }
+    Mod+Down { focus-window-down; }
+    
+    // #"Move around"
+    Mod+Ctrl+Left { move-column-left; }
+    Mod+Ctrl+Right{ move-column-right; }
+    Mod+Ctrl+Up { move-window-up; }
+    Mod+Ctrl+Down { move-window-down; }
+    
+    // #"Move window across workspace"
+    Mod+Shift+Up { move-window-to-workspace-up; }
+    Mod+Shift+Down{ move-window-to-workspace-down; }
+    
+    // #"Consume or expel"
+    Mod+bracketleft { consume-or-expel-window-left; }
+    Mod+bracketright { consume-or-expel-window-right; }
+    
+    // #"Resize window"
+    Mod+Alt+Left { set-window-width "-5%"; }
+    Mod+Alt+Right { set-window-width "+5%"; }
+    Mod+Alt+Up{ set-window-height "-5%"; }
+    Mod+Alt+Down{ set-window-height "+5%"; }
+    
+    // #"Switch preset dimension"
+    Mod+P { switch-preset-column-width; }
+    Mod+Shift+P { switch-preset-window-height; }
+    
+    // #"Worksapce related"
+    Shift+Alt+Up { focus-workspace-up; }
+    Shift+Alt+Down { focus-workspace-down; }
+
+    // #"Other"
+    Mod+O { toggle-overview; }
+    Mod+F { toggle-window-floating; }
+    Mod+Shift+F { switch-focus-between-floating-and-tiling; }
+
+    
+    // #"Core Noctalia binds"
+    Mod+Slash hotkey-overlay-title="启动器"  { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+Space hotkey-overlay-title="control center"  { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
+    Mod+Shift+Slash hotkey-overlay-title="设置"  { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
+    Mod+Escape hotkey-overlay-title="电源"  { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    Mod+L hotkey-overlay-title="锁屏"  { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Mod+Shift+B hotkey-overlay-title="状态栏"  { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
+
+    // #"Noctalia Plugin binds"
+    Mod+Shift+W hotkey-overlay-title="wallpaper selector"  { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
+    Mod+Shift+R hotkey-overlay-title="录屏"  { spawn-sh "qs -c noctalia-shell ipc call plugin:screen-recorder toggle"; }
+    Mod+Shift+V hotkey-overlay-title="video wallpaper"  { spawn-sh "qs -c noctalia-shell ipc call plugin:videowallpaper openPanel"; }
+    Mod+F1 hotkey-overlay-title="快捷键"  { spawn-sh "qs -c noctalia-shell ipc call plugin:keybind-cheatsheet toggle"; }
+
+    // #"Audio & Brightness"
+    XF86AudioRaiseVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }
+    XF86AudioLowerVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease"; }
+    XF86AudioMute { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteOutput"; }
+    XF86MonBrightnessUp { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"; }
+    XF86MonBrightnessDown { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
+}

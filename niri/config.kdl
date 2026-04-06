@@ -1,0 +1,107 @@
+// This config is in the KDL format: https://kdl.dev
+// "/-" comments out the following node.
+// Check the wiki for a full description of the configuration:
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+// Input device configuration.
+// Find the full list of options on the wiki:
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Input
+input {
+    keyboard {
+        xkb {
+            // You can set rules, model, layout, variant and options.
+            // For more information, see xkeyboard-config(7).
+
+            // For example:
+            // layout "us,ru"
+            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
+
+            // If this section is empty, niri will fetch xkb settings
+            // from org.freedesktop.locale1. You can control these using
+            // localectl set-x11-keymap.
+        }
+
+        // Enable numlock on startup, omitting this setting disables it.
+        // numlock
+    }
+
+    // Next sections include libinput settings.
+    // Omitting settings disables them, or leaves them at their default values.
+    // All commented-out settings here are examples, not defaults.
+    touchpad {
+        // off
+        tap
+        // dwt
+        // dwtp
+        drag true
+        // drag-lock
+        // natural-scroll
+        // accel-speed 0.2
+        // accel-profile "flat"
+        scroll-method "two-finger"
+        // disabled-on-external-mouse
+    }
+}
+// You can configure outputs by their name, which you can find
+// by running `niri msg outputs` while inside a niri instance.
+// The built-in laptop monitor is usually called "eDP-1".
+// Find more information on the wiki:
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
+// Remember to uncomment the node by removing "/-"!
+output "eDP-1" {
+    // off
+    mode "1920x1080@60"
+
+    // Custom modes. Caution: may damage your display.
+    // mode custom=true "1920x1080@100"
+    // modeline 173.00  1920 2048 2248 2576  1080 1083 1088 1120 "-hsync" "+vsync"
+}
+// Add lines like this to spawn processes at startup.
+// Note that running niri as a session supports xdg-desktop-autostart,
+// which may be more convenient to use.
+// See the binds section below for more spawn examples.
+// This line starts waybar, a commonly used bar for Wayland compositors.
+environment {
+  XDG_CURRENT_DESKTOP "niri"
+  GTK_IM_MODULE "fcitx"
+  QT_IM_MODULE "fcitx"
+  XMODIFIERS "@im=fcitx"
+}
+spawn-at-startup "qs" "-c" "noctalia-shell"
+hotkey-overlay {
+    skip-at-startup
+}
+prefer-no-csd
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+// Window rules let you adjust behavior for individual windows.
+// Find more information on the wiki:
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
+// Work around WezTerm's initial configure bug
+// by setting an empty default-column-width.
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
+
+// Override to disable super+tab
+recent-windows {
+    off
+}
+blur {
+  passes 4        // more passes = stronger blur (default: 3)
+  offset 3.0      // sample distance per pass (default: 3.0)
+  noise 0.03      // grain overlay (default: 0.02)
+  saturation 1.5  // color saturation boost (default: 1.5)
+}
+
+include "./layout.kdl"
+include "./rules.kdl"
+include "./keybinds.kdl"
+include "./animations/ribbons.kdl"
+
+include "./noctalia.kdl"
+
