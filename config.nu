@@ -1,0 +1,1 @@
+/home/wzm/.config/nushell/config.nu
