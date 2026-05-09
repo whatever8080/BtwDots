@@ -1,1 +1,0 @@
-/home/wzm/Coding/Scripts/Nushell/theme_apply.nu

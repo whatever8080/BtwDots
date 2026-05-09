@@ -1,0 +1,35 @@
+[[dirs.helix]]
+path = "~/.config/helix"
+include = ["config.toml"]
+target = "~/GitRepo/BtwDots/helix"
+
+[[dirs.yazi]]
+path = "~/.config/yazi"
+include = ["yazi.toml"]
+target = "~/GitRepo/BtwDots"
+
+[[dirs.kitty]]
+path = "~/.config/kitty"
+include = ["kitty.conf"]
+target = "~/GitRepo/BtwDots"
+
+[[dirs.niri]]
+path = "~/.config/niri"
+include = ["config.kdl","keybinds.kdl","layout.kdl","rules.kdl"]
+target = "~/GitRepo/BtwDots/niri"
+
+[[dirs.noctalia]]
+path = "~/.config/noctalia"
+include = ["settings.json","plugins.json"]
+target = "~/GitRepo/BtwDots/noctalia"
+
+
+[[dirs.matugen]]
+path = "~/.config/matugen/templates"
+include = ["ghgrab.toml","pacsea.conf","surge.toml","termusic.yml","tuios.json"]
+target = "~/GitRepo/BtwDots/templates"
+
+[[dirs.scripts]]
+path = "~/Coding/Scripts/Nushell"
+include = ["theme_apply.nu","copy_file.nu"]
+target = "~/GitRepo/BtwDots/scripts"
