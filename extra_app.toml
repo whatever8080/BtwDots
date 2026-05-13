@@ -1,6 +1,0 @@
-cargo = ["tmmpr"]
-npm = ["bun","nrm","turbo","typescript-language-server"]
-
-[go]
-trex = { url = "github.com/samyakbardiya/trex@latest" }
-tuiso = { url = "github.com/Gaurav-Gosain/tuios/cmd/tuios@latest" }
