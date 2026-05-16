@@ -1,0 +1,18 @@
+[config]
+
+[templates.termusic]
+input_path = "~/.config/matugen/templates/termusic.yml"
+output_path = "~/.config/termusic/themes/Matugen.yml"
+post_hook = "nu ~/Coding/Scripts/Nushell/theme_apply.nu termusic"
+
+[templates.ghgrab]
+input_path = "~/.config/matugen/templates/ghgrab.toml"
+output_path = "~/.config/ghgrab/theme.toml"
+
+[templates.tuios]
+input_path = "~/.config/matugen/templates/tuios.json"
+output_path = "~/.config/tuios/themes/matugen.json"
+
+[templates.elio]
+input_path = '~/.config/matugen/templates/elio.toml'
+output_path = '~/.config/elio/theme.toml'
