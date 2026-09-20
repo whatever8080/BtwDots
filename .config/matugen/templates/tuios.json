@@ -1,31 +1,26 @@
 {
-  "display_name": "Matugen",
   "id": "matugen",
-  "credit_sources": [
-    {
-      "name": "maxwell",
-      "link": "me.com"
-    }
-  ],
-  "dark": {{is_dark_mode}},
-  "fg": "{{colors.on_surface.default.hex}}",
-  "bg": "{{colors.surface.default.hex}}",
-  "selection_bg": "{{colors.secondary_container.default.hex}}",
-  "cursor": "{{colors.primary.default.hex}}",
-  "black": "{{base16.base00.default.hex}}",
-  "blue": "{{base16.base0d.default.hex}}",
-  "cyan": "{{base16.base0c.default.hex}}",
-  "green": "{{base16.base0b.default.hex}}",
-  "purple": "{{base16.base0e.default.hex}}",
-  "red": "{{base16.base08.default.hex}}",
-  "white": "{{base16.base05.default.hex}}",
-  "yellow": "{{base16.base0a.default.hex}}",
-  "bright_black": "{{base16.base03.default.hex}}",
-  "bright_blue": "{{base16.base0d.default.hex}}",
-  "bright_cyan": "{{base16.base0c.default.hex}}",
-  "bright_green": "{{base16.base0b.default.hex}}",
-  "bright_purple": "{{base16.base0e.default.hex}}",
-  "bright_red": "{{base16.base08.default.hex}}",
-  "bright_white": "{{base16.base07.default.hex}}",
-  "bright_yellow": "{{base16.base0a.default.hex}}"
+  "display_name": "Matugen",
+
+  "fg": "{{colors.on_background.default.hex}}",
+  "bg": "{{colors.background.default.hex}}",
+  "cursor": "{{colors.primary.dark.hex}}",
+
+  "black": "{{base16.base00.dark.hex}}",
+  "red": "{{base16.base08.dark.hex}}",
+  "green": "{{base16.base0b.dark.hex}}",
+  "yellow": "{{base16.base0a.dark.hex}}",
+  "blue": "{{base16.base0d.dark.hex}}",
+  "purple": "{{base16.base0e.dark.hex}}",
+  "cyan": "{{base16.base0c.dark.hex}}",
+  "white": "{{base16.base04.dark.hex}}"
+
+  "bright_black": "{{base16.base07.light.hex}}",
+  "bright_red": "{{base16.base08.light.hex}}",
+  "bright_green": "{{base16.base0b.light.hex}}",
+  "bright_yellow": "{{base16.base0a.light.hex}}",
+  "bright_blue": "{{base16.base0d.light.hex}}",
+  "bright_purple": "{{base16.base0e.light.hex}}",
+  "bright_cyan": "{{base16.base0c.light.hex}}",
+  "bright_white": "{{base16.base06.light.hex}}"
 }

@@ -15,7 +15,7 @@ prepend_previewers = [
 
 [opener]
 extract = [
-	{ run = 'ouch d -y "$s1"', desc = "Extract here with ouch", for = "unix" },
+	{ run = 'ouch d -y "%s1"', desc = "Extract here with ouch", for = "unix" },
 ]
 play = [
 	{ run = "mpv %s", orphan = true, for = "unix" },

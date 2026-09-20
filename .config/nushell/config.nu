@@ -5,6 +5,7 @@ $env.PROMPT_INDICATOR_VI_NORMAL = '>'
 $env.PROMPT_INDICATOR_VI_INSERT = ':'
 
 # alias
+alias weather = weathr -s rain -n -l --hide-hud
 alias fdpro = fd --hidden --max-depth 5
 
 # enviraonment variables
@@ -27,4 +28,4 @@ $env.path = $env.PATH | split row ( char esep )
   | prepend ( $env.FNM_MULTISHELL_PATH | path join bin )
 
 # command
-fnm use 25 o+e> /dev/null
+fnm use 26 o+e> /dev/null

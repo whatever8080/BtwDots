@@ -1,12 +1,12 @@
 [[plugin.deps]]
 use = "boydaihungst/mediainfo"
-rev = "aa4804b"
-hash = "a32da7bd1c8bcb4c61d770dd173ec7bd"
+rev = "f1cec0b"
+hash = "fd9312e974c63438b1f8737711462d52"
 
 [[plugin.deps]]
 use = "ndtoan96/ouch"
-rev = "406ce6c"
-hash = "f5afc904d5106ee368c8aa2ded43bd74"
+rev = "596b666"
+hash = "c2f4f4aca257dcceafa9e3b828dbf1c9"
 
 [flavor]
 deps = []

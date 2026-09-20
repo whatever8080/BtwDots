@@ -73,12 +73,12 @@ environment {
   XMODIFIERS "@im=fcitx"
   QT_QPA_PLATFORMTHEME "qt6ct"
 }
-spawn-sh-at-startup "qs -c noctalia-shell"
+spawn-at-startup "noctalia"
 hotkey-overlay {
     skip-at-startup
 }
 prefer-no-csd
-screenshot-path "~/Pictures/Screenshots/Screenshot-%Y-%m-%d-%H-%M-%S.png"
+screenshot-path "~/Pictures/screenshots/Screenshot-%Y-%m-%d-%H-%M-%S.png"
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules

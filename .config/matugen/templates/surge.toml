@@ -1,0 +1,54 @@
+[colors]
+name = "matugen"
+
+
+[colors.primary]
+background = '{{base16.base00.dark.hex}}'
+foreground = '{{base16.base04.dark.hex}}'
+accent = '{{colors.secondary.dark.hex}}'
+
+[colors.normal]
+black =   '{{colors.background.dark.hex}}'
+red =     '{{base16.base08.dark.hex}}'
+green =   '{{base16.base0b.dark.hex}}'
+yellow =  '{{base16.base0a.dark.hex}}'
+blue =    '{{base16.base0d.dark.hex}}'
+magenta = '{{base16.base0e.dark.hex}}'
+cyan =    '{{base16.base0c.dark.hex}}'
+white =   '{{colors.on_background.dark.hex}}'
+
+[colors.bright]
+black =   '{{colors.background.dark.hex | lighten: 20}}'
+red =     '{{base16.base08.dark.hex | lighten: 20}}'
+green =   '{{base16.base0b.dark.hex | lighten: 20}}'
+yellow =  '{{base16.base0a.dark.hex | lighten: 20}}'
+blue =    '{{base16.base0d.dark.hex | lighten: 20}}'
+magenta = '{{base16.base0e.dark.hex | lighten: 20}}'
+cyan =    '{{base16.base0c.dark.hex | lighten: 20}}'
+white =   '{{colors.on_background.dark.hex | lighten: 20}}'
+
+# Standard Light
+[colors.light.primary]
+background = '{{base16.base07.light.hex}}'
+foreground = '{{base16.base06.light.hex}}'
+accent = '{{colors.secondary.light.hex}}'
+
+[colors.light.normal]
+black =   '{{colors.background.light.hex}}'
+red =     '{{base16.base08.light.hex}}'
+green =   '{{base16.base0b.light.hex}}'
+yellow =  '{{base16.base0a.light.hex}}'
+blue =    '{{base16.base0d.light.hex}}'
+magenta = '{{base16.base0e.light.hex}}'
+cyan =    '{{base16.base0c.light.hex}}'
+white =   '{{colors.on_background.light.hex}}'
+
+[colors.light.bright]
+black =   '{{colors.background.light.hex | lighten: 10}}'
+red =     '{{base16.base08.light.hex | lighten: 10}}'
+green =   '{{base16.base0b.light.hex | lighten: 10}}'
+yellow =  '{{base16.base0a.light.hex | lighten: 10}}'
+blue =    '{{base16.base0d.light.hex | lighten: 10}}'
+magenta = '{{base16.base0e.light.hex | lighten: 10}}'
+cyan =    '{{base16.base0c.light.hex | lighten: 10}}'
+white =   '{{colors.on_background.light.hex | lighten: 10}}'

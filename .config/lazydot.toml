@@ -10,7 +10,7 @@ dotfolder_path = "~/.dots"
 #     "~/example/.bashrc",
 #     "~/example/.vimrc",
 # ]
-paths = ["~/.config/lazydot.toml", "~/.config/helix/config.toml", "~/.config/helix/languages.toml", "~/.config/matugen/config.toml", "~/.config/matugen/templates/tuios.json", "~/.config/matugen/templates/ghgrab.toml", "~/.config/matugen/templates/termusic.yml", "~/.config/niri/keybinds.kdl", "~/.config/niri/rules.kdl", "~/.config/niri/layout.kdl", "~/.config/niri/config.kdl", "~/.config/noctalia/settings.json", "~/.config/noctalia/plugins.json", "~/.config/nushell/config.nu", "~/.config/kitty/kitty.conf", "~/.config/fastfetch", "~/.config/yazi/yazi.toml", "~/.config/yazi/package.toml"]
+paths = ["~/.config/lazydot.toml", "~/.config/helix/config.toml", "~/.config/helix/languages.toml", "~/.config/matugen/config.toml", "~/.config/niri/keybinds.kdl", "~/.config/niri/rules.kdl", "~/.config/niri/layout.kdl", "~/.config/niri/config.kdl", "~/.config/nushell/config.nu", "~/.config/kitty/kitty.conf", "~/.config/fastfetch", "~/.config/yazi/yazi.toml", "~/.config/yazi/package.toml", "~/.config/matugen/templates"]
 
 [defaults]
 # Behavior when a duplicate file is found at the destination:

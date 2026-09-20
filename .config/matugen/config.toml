@@ -1,18 +1,21 @@
 [config]
 
-[templates.termusic]
-input_path = "~/.config/matugen/templates/termusic.yml"
-output_path = "~/.config/termusic/themes/Matugen.yml"
-post_hook = "nu ~/Coding/Scripts/Nushell/theme_apply.nu termusic"
+[templates.bookokrat]
+input_path = "~/.config/matugen/templates/bookokrat.yaml"
+output_path = "~/.config/bookokrat/config.yaml"
 
-[templates.ghgrab]
-input_path = "~/.config/matugen/templates/ghgrab.toml"
-output_path = "~/.config/ghgrab/theme.toml"
+[templates.surge]
+input_path = "~/.config/matugen/templates/surge.toml"
+output_path = "~/.config/surge/themes/matugen.toml"
 
 [templates.tuios]
 input_path = "~/.config/matugen/templates/tuios.json"
 output_path = "~/.config/tuios/themes/matugen.json"
 
-[templates.elio]
-input_path = '~/.config/matugen/templates/elio.toml'
-output_path = '~/.config/elio/theme.toml'
+[templates.musicfox]
+input_path = "~/.config/matugen/templates/musicfox.toml"
+output_path = "~/.config/go-musicfox/themes/matugen.toml"
+
+[templates.musicfox_config]
+input_path = "~/.config/matugen/templates/musicfox_config.toml"
+output_path = "~/.config/go-musicfox/config.toml"
