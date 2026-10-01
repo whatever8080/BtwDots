@@ -1,0 +1,37 @@
+pkgname="E-IX"
+pkgdesc="单二进制、无 CGO、依赖 内核独立进程。"
+pkgver="1.0.0"
+pkgrel="1"
+
+license=("custom:none")
+arch=("x86_64")
+
+source=("https://dl.gameddns.com/download/eix-linux-amd64.tar.gz")
+sha256sums=("01a637b683c79016492378e5902c7d72aa6f4aeb49925c3684cf3e0509ad0a92")
+
+package() {
+	install -D $srcdir/eix-linux-amd64/eix-cli $pkgdir/usr/bin/eix-cli
+	install -D $srcdir/eix-linux-amd64/mihomo $pkgdir/usr/bin/mihomo
+	mkdir -p $pkgdir/usr/lib/systemd/system
+	tee $pkgdir/usr/lib/systemd/system/eix.service >/dev/null <<'EOF'
+[Unit]
+Description=E-IX
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/eix-cli daemon --transparent
+ExecStopPost=/usr/bin/eix-cli down
+Environment=EIX_DATA_DIR=/etc/eix
+Environment=EIX_CORE=/usr/bin/mihomo
+UMask=0077
+KillMode=mixed
+TimeoutStopSec=25
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+EOF
+}
