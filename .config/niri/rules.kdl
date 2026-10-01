@@ -36,7 +36,7 @@ window-rule {
 
 // transparent & blur
 window-rule {
-   match app-id="org.telegram.desktop"
+   match app-id="org.teegram.desktop"
    match app-id="kitty"
    match app-id="dev.noctalia.Noctalia"
    
@@ -67,11 +67,16 @@ window-rule {
 }
 
 // layer rules
+// layer-rule {
+//     match namespace="^skwd-paper-backdrop$"
+//     place-within-backdrop true
+// }
 layer-rule {
-    match namespace="^skwd-paper-backdrop$"
+    match namespace="^noctalia-backdrop$"
     place-within-backdrop true
 }
 layer-rule {
   match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+  match namespace="^noctalia-desktop-widget-audio_visualizer-*"
   opacity 0.7
 }

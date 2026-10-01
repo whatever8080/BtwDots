@@ -439,6 +439,8 @@ intelligence = ["P"]
 clearSongCache = ["u", "U"]
 logout = ["W"]
 curPlaylist = ["c", "C"]
+addSelectedSongToUserPlaylist = []
+removeSelectedSongFromUserPlaylist = []
 
 
 # 自定义分享模板

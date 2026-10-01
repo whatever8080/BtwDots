@@ -1,8 +1,8 @@
 binds {
     // #"Application"
     Mod+T hotkey-overlay-title="terminal" { spawn "kitty"; }
+    Mod+W hotkey-overlay-title="matuwall" { spawn-sh "matuwall"; }
     Mod+B hotkey-overlay-title="browser" { spawn "google-chrome-stable"; }
-    Mod+Shift+W hotkey-overlay-title="skwd wall" { spawn "skwd-wall-v2"; }
   
     // #"Focus around"
     Mod+H { focus-column-left; }
@@ -53,10 +53,16 @@ binds {
     Mod+Space hotkey-overlay-title="control center"  { spawn-sh "noctalia msg panel-toggle control-center"; }
     Mod+Shift+Slash hotkey-overlay-title="settings"  { spawn-sh "noctalia msg settings-toggle"; }
     Mod+Escape hotkey-overlay-title="power menu"  { spawn-sh "noctalia msg panel-toggle session"; }
+    Mod+Shift+B hotkey-overlay-title="staus bar"  { spawn-sh "noctalia msg bar-toggle default"; }
+    Mod+Shift+W hotkey-overlay-title="wallpaper selector" { spawn-sh "noctalia msg panel-toggle wallpaper"; }
+    Mod+Shift+E hotkey-overlay-title="open desktop widget editor" { spawn-sh "noctalia msg desktop-widgets-edit"; }
+    Mod+Shift+D hotkey-overlay-title="toggle desktop widget" { spawn-sh "noctalia msg desktop-widgets-toggle"; }
 
     // #"Noctalia Plugin binds"
     Mod+Alt+R hotkey-overlay-title="screen recorder"  { spawn-sh "noctalia msg plugin noctalia/screen_recorder:service all toggle"; }
     Mod+F1 hotkey-overlay-title="keybinds cheatsheet"  { spawn-sh "noctalia msg panel-toggle kenn/keybind-cheatsheet:cheatsheet"; }
+    Mod+Alt+W hotkey-overlay-title="wallpape engine"  { spawn-sh "noctalia msg panel-toggle tadomika_ari/w-engine:w-engine-panel"; }
+    Mod+Ctrl+W hotkey-overlay-title="gslapper wallpaper"  { spawn-sh "noctalia msg panel-toggle nomadcxx/gslapper:picker"; }
 
     // Audio & Brightness
     XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }

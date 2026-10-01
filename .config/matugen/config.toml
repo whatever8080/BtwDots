@@ -8,10 +8,6 @@ output_path = "~/.config/bookokrat/config.yaml"
 input_path = "~/.config/matugen/templates/surge.toml"
 output_path = "~/.config/surge/themes/matugen.toml"
 
-[templates.tuios]
-input_path = "~/.config/matugen/templates/tuios.json"
-output_path = "~/.config/tuios/themes/matugen.json"
-
 [templates.musicfox]
 input_path = "~/.config/matugen/templates/musicfox.toml"
 output_path = "~/.config/go-musicfox/themes/matugen.toml"

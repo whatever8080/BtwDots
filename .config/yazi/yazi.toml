@@ -27,7 +27,7 @@ open = [
 	{ run = "xdg-open %s1", desc = "Open" },
 ]
 view = [
-  { run = "oculante %s1", orphan = true, for = "unix" }
+  { run = "mcat -I %s", block = true, for = "unix" }
 ]
 
 [open]
@@ -36,8 +36,9 @@ rules = [
   { mime = "image/*", use = "view" },
 	{ mime = "{audio,video}/*", use = "play" },
 	{ url = "*.json", use = "edit" },
+	{ url = "*/", use = "view" },
+  { mime = "application/{*zip,tar,bzip2,7z*,rar,xz,zstd,java-archive}", use = "extract" },
   { url = "*", use = "open" },
-  { mime = "application/{*zip,tar,bzip2,7z*,rar,xz,zstd,java-archive}", use = "extract" }
 ]
 
 [tasks]

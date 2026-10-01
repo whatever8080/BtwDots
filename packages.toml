@@ -1,0 +1,23 @@
+[source.nodejs]
+downloader_help = "npm"
+args = [
+    "i",
+    "-g",
+]
+packages = [
+    "bun",
+    "typescript-language-server",
+]
+
+[source.rust]
+downloader_help = "cargo"
+args = []
+packages = [
+    "lazydot",
+    "ytkew",
+]
+
+[source.arch]
+downloader_help = "paru"
+args = ["-Sy", "--needed"]
+packages = ["E-IX", "adw-gtk-theme", "archlinuxcn-keyring", "archwiki-tui-git", "base", "bookokrat-bin", "bottom", "cmake", "efibootmgr", "fastfetch", "fcitx5-configtool", "fcitx5-gtk", "fcitx5-mozc", "fcitx5-rime", "fnm", "gitsnip", "go", "go-musicfox-git", "google-chrome", "gpu-screen-recorder", "gslapper", "helix", "intel-ucode", "kitty", "linecast", "linux-wallpaperengine-git", "matuwall-bin", "mcat-bin", "mediainfo", "networkmanager", "niri", "noctalia-greeter", "nomino-bin", "noto-fonts-emoji", "nushell", "nwg-look", "paru", "qt6ct", "rclone", "rime-ice-git", "sd", "socat", "starship", "steam", "surge-bin", "tealdeer", "telegram-desktop", "terminal-browser-bin", "terminal-rain-lightning", "tetro-tui-bin", "tpm2-tools", "weathr-bin", "wqy-zenhei", "yazi", "youtube-tui"]
