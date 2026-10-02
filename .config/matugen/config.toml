@@ -1,5 +1,9 @@
 [config]
 
+[templates.pigma]
+input_path = "~/.config/matugen/templates/pigma.toml"
+output_path = "~/.config/pigma/config.toml"
+
 [templates.bookokrat]
 input_path = "~/.config/matugen/templates/bookokrat.yaml"
 output_path = "~/.config/bookokrat/config.yaml"

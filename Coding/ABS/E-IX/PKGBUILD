@@ -12,6 +12,7 @@ sha256sums=("01a637b683c79016492378e5902c7d72aa6f4aeb49925c3684cf3e0509ad0a92")
 package() {
 	install -D $srcdir/eix-linux-amd64/eix-cli $pkgdir/usr/bin/eix-cli
 	install -D $srcdir/eix-linux-amd64/mihomo $pkgdir/usr/bin/mihomo
+	install -D $srcdir/eix-linux-amd64/geoip.metadb $pkgdir/usr/share/eix/geoip.metadb
 	mkdir -p $pkgdir/usr/lib/systemd/system
 	tee $pkgdir/usr/lib/systemd/system/eix.service >/dev/null <<'EOF'
 [Unit]

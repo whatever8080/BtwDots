@@ -29,6 +29,7 @@ window-rule {
     match app-id="org.telegram.desktop"
 	match app-id="google-chrome"
 	match app-id="dev.noctalia.Noctalia"
+	match app-id="dev.zed.Zed"
     
     draw-border-with-background false
 	
@@ -39,6 +40,7 @@ window-rule {
    match app-id="org.teegram.desktop"
    match app-id="kitty"
    match app-id="dev.noctalia.Noctalia"
+   match app-id="dev.zed.Zed"
    
    opacity 0.8
    background-effect {

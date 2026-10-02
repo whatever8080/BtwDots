@@ -3,6 +3,12 @@ theme = "noctalia"
 [editor.soft-wrap]
 enable = true
 
+[keys.normal]
+C-j = "rotate_view"
+C-k = "rotate_view_reverse"
+C-h = ":buffer-previous"
+C-l = ":buffer-next"
+
 [keys.insert]
 A-a = "goto_line_start"
 "A-;" = "goto_line_end"
