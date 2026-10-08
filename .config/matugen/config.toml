@@ -11,11 +11,3 @@ output_path = "~/.config/bookokrat/config.yaml"
 [templates.surge]
 input_path = "~/.config/matugen/templates/surge.toml"
 output_path = "~/.config/surge/themes/matugen.toml"
-
-[templates.musicfox]
-input_path = "~/.config/matugen/templates/musicfox.toml"
-output_path = "~/.config/go-musicfox/themes/matugen.toml"
-
-[templates.musicfox_config]
-input_path = "~/.config/matugen/templates/musicfox_config.toml"
-output_path = "~/.config/go-musicfox/config.toml"

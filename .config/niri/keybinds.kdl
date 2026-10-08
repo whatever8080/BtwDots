@@ -57,6 +57,7 @@ binds {
     Mod+Shift+W hotkey-overlay-title="wallpaper selector" { spawn-sh "noctalia msg panel-toggle wallpaper"; }
     Mod+Shift+E hotkey-overlay-title="open desktop widget editor" { spawn-sh "noctalia msg desktop-widgets-edit"; }
     Mod+Shift+D hotkey-overlay-title="toggle desktop widget" { spawn-sh "noctalia msg desktop-widgets-toggle"; }
+    Mod+Shift+M hotkey-overlay-title="toggle theme mode" { spawn-sh "noctalia msg theme-mode-toggle"; }
 
     // #"Noctalia Plugin binds"
     Mod+Alt+R hotkey-overlay-title="screen recorder"  { spawn-sh "noctalia msg plugin noctalia/screen_recorder:service all toggle"; }

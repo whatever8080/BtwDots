@@ -2,3 +2,21 @@
 name = "toml"
 roots = ["."]
 
+[[language]]
+name = "typescript"
+roots = ["package.json", "tsconfig.json", "biome.json"]
+file-types = ["ts", "js", "tsx", "jsx"]
+indent = { unit = "\t", tab-width = 4 }
+language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
+auto-format = true
+
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+args = ["--stdio"]
+
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
+
+[language-server.biome.config.biome.inlineConfig]
+linter.rules.suspicious.noConsole = "off"
