@@ -1,0 +1,26 @@
+pkgname="tubetui"
+pkgdesc="YouTube and your local videos & music in the terminal (Rust + ratatui + mpv): tabs, video embedded in kitty, subscriptions, playlists, history with resume, downloads, SponsorBlock, chapters, comments, browser login"
+pkgver="0.7.4"
+pkgrel="1"
+
+url="https://github.com/polblancoo/tubetui"
+license=("Apache-2.0" "MIT")
+arch=("x86_64")
+
+source=("https://github.com/polblancoo/tubetui/releases/download/v0.7.4/tubetui-x86_64-linux.tar.gz")
+sha256sums=("2c721b48e7fa4c67e1d2282e60389fab069a0fb972e03c12e56370b68f254633")
+
+depends=(
+	"mpv"
+	"yt-dlp"
+)
+
+optdepends=(
+	"kitty: for ebedded video"
+	"wmctrl: for window fullscrenn(x11)"
+	"python-secretstorage: for yt-dlp to open keyring when login in with installed browser"
+)
+
+package() {
+	install -Dm 755 $srcdir/$pkgname/$pkgname $pkgdir/usr/bin/$pkgname
+}

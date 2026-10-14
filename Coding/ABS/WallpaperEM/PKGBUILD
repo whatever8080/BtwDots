@@ -1,0 +1,26 @@
+pkgname="WallpaperEM"
+pkgdesc="A supremely elegant cross-platform wallpaper engine — not a WE clone: scene/web/video/image wallpapers, tiny install, decoupled deps, great performance, quality presets, AI authoring, share links with live mobile rendering."
+pkgver="2.1.1"
+pkgrel="1"
+
+url="https://github.com/oneincase/WallpaperEM"
+license=("MIT")
+arch=("x86_64")
+
+depends=(
+	"gst-plugins-base"
+	"gst-plugins-good"
+	"gst-plugins-bad"
+	"gst-libav"
+	"webkit2gtk-4.1"
+	"libayatana-appindicator"
+)
+
+source=("https://github.com/oneincase/WallpaperEM/releases/download/v2.1.1/WallpaperEM_2.1.1_amd64.deb")
+sha256sums=("de5299797648922a8232abcd91550d7cb4c9561ad9f2327b62d7faf4a30caf29")
+
+package() {
+	cd $srcdir
+	bsdtar -xf data.tar.gz
+	cp -r $srcdir/usr $pkgdir
+}
