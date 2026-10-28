@@ -1,13 +1,26 @@
 [[language]]
 name = "toml"
 roots = ["."]
+indent = { unit = "\t", tab-width = 2 }
+formatter = { command = "taplo", args = ["format", "-"] }
+auto-format = true
+
+[language-server.taplo]
+command = "taplo"
+args = ["lsp", "stdio"]
+
 
 [[language]]
 name = "typescript"
 roots = ["package.json", "tsconfig.json", "biome.json"]
 file-types = ["ts", "js", "tsx", "jsx"]
 indent = { unit = "\t", tab-width = 4 }
-language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+]
 auto-format = true
 
 [language-server.typescript-language-server]

@@ -73,7 +73,7 @@ environment {
   XMODIFIERS "@im=fcitx"
   QT_QPA_PLATFORMTHEME "qt6ct"
 }
-spawn-at-startup "noctalia"
+spawn-at-startup "skwd-walld"
 hotkey-overlay {
     skip-at-startup
 }
@@ -93,10 +93,14 @@ recent-windows {
     off
 }
 
+overview {
+    workspace-shadow { off; }
+}
+
 include "./layout.kdl"
 include "./rules.kdl"
 include "./keybinds.kdl"
 include "./animations/ribbons.kdl"
 
-include "./noctalia.kdl"
+include "~/.cache/hellwal/niri-colors.conf"
 

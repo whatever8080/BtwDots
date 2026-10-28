@@ -76,12 +76,16 @@ window-rule {
 //     match namespace="^skwd-paper-backdrop$"
 //     place-within-backdrop true
 // }
+// layer-rule {
+//     match namespace="^noctalia-backdrop$"
+//     place-within-backdrop true
+// }
+// layer-rule {
+//   match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+//   match namespace="^noctalia-desktop-widget-audio_visualizer-*"
+//   opacity 0.7
+// }
 layer-rule {
-    match namespace="^noctalia-backdrop$"
+    match namespace="^skwd-paper-backdrop$"
     place-within-backdrop true
-}
-layer-rule {
-  match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
-  match namespace="^noctalia-desktop-widget-audio_visualizer-*"
-  opacity 0.7
 }
