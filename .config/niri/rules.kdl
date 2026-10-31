@@ -86,6 +86,6 @@ window-rule {
 //   opacity 0.7
 // }
 layer-rule {
-    match namespace="^skwd-paper-backdrop$"
+    match namespace="^waywal-backdrop$"
     place-within-backdrop true
 }

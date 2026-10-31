@@ -62,7 +62,6 @@ ripgrep
 rustup
 sd
 skwd-lens-bin
-skwd-wall-v2-bin
 starship
 steam
 surge-bin
@@ -81,6 +80,7 @@ upower
 vulkan-intel
 weathr-bin
 wqy-zenhei
+wwal
 xdg-desktop-portal-gnome
 xwayland-satellite
 yazi
