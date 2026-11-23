@@ -3,6 +3,8 @@ binds {
     Mod+T hotkey-overlay-title="terminal" { spawn "kitty"; }
     Mod+W hotkey-overlay-title="skwd-wall-v2" { spawn-sh "skwd-wall-v2"; }
     Mod+B hotkey-overlay-title="browser" { spawn "google-chrome-stable"; }
+    Mod+N hotkey-overlay-title="nectarlink" { spawn "nectarlink-desktop"; }
+    Mod+S hotkey-overlay-title="steam" { spawn "steam"; }
   
     // #"Focus around"
     Mod+H { focus-column-left; }
@@ -79,9 +81,9 @@ binds {
     XF86MonBrightnessUp { spawn-sh "brightnessctl s +5%"; }
     XF86MonBrightnessDown { spawn-sh "brightnessctl s 5%-"; }
 
-    // // #"Screen"
-    // Print hotkey-overlay-title="region screenshot" { spawn-sh "noctalia msg screenshot-region"; }
-    // Shift+Print hotkey-overlay-title="fullscreen screenshot" { spawn-sh "noctalia msg screenshot-fullscreen"; }
-    // Mod+Print hotkey-overlay-title="window screenshot" { spawn-sh "niri msg screenshot"; }
+    // #"Screen"
+    Print hotkey-overlay-title="region screenshot" { spawn-sh "niri msg action screenshot"; }
+    Shift+Print hotkey-overlay-title="fullscreen screenshot" { spawn-sh "niri msg action screenshot-screen"; }
+    Mod+Print hotkey-overlay-title="window screenshot" { spawn-sh "niri msg action screenshot-window"; }
     // Mod+A hotkey-overlay-title="screen annotation" { spawn-sh "noctalia msg screenshot-annotate"; }
 }

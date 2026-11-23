@@ -1,5 +1,5 @@
 [mgr]
-ratio = [1,2,5]
+ratio = [1, 2, 5]
 
 [plugin]
 prepend_preloaders = [
@@ -7,38 +7,30 @@ prepend_preloaders = [
   { mime = "application/subrip", run = "mediainfo" },
 ]
 prepend_previewers = [
-  { mime = "{audio,video,image}/*", run = "mediainfo"},
+  { mime = "{audio,video,image}/*", run = "mediainfo" },
   { mime = "application/subrip", run = "mediainfo" },
-  
-  { mime = "application/{*zip,tar,bzip2,7z*,rar,xz,zstd,java-archive}", run  = "ouch --show-file-icons" }
+
+  { mime = "application/{*zip,tar,bzip2,7z*,rar,xz,zstd,java-archive}", run = "ouch --show-file-icons" },
 ]
 
 [opener]
 extract = [
-	{ run = 'ouch d -y "%s1"', desc = "Extract here with ouch", for = "unix" },
+  { run = 'ouch d -y "%s1"', desc = "Extract here with ouch", for = "unix" },
 ]
-play = [
-	{ run = "mpv %s", orphan = true, for = "unix" },
-]
-edit = [
-	{ run = "$EDITOR %s", block = true, for = "unix" },
-]
-open = [
-	{ run = "xdg-open %s1", desc = "Open" },
-]
-view = [
-  { run = "rview %d", block = true, for = "unix" }
-]
+play = [{ run = "mpv %s", orphan = true, for = "unix" }]
+edit = [{ run = "$EDITOR %s", block = true, for = "unix" }]
+open = [{ run = "xdg-open %s1", desc = "Open" }]
+view = [{ run = "gallery-tui %d", block = true, for = "unix" }]
 
 [open]
 rules = [
-	{ mime = "text/*", use = "edit" },
+  { mime = "text/*", use = "edit" },
   { mime = "image/*", use = "view" },
-	{ mime = "{audio,video}/*", use = "play" },
-	{ url = "*.json", use = "edit" },
+  { mime = "{audio,video}/*", use = "play" },
+  { url = "*.json", use = "edit" },
   { mime = "application/{*zip,tar,bzip2,7z*,rar,xz,zstd,java-archive}", use = "extract" },
   { url = "*", use = "open" },
 ]
 
 [tasks]
-image_alloc      = 1073741824        # = 1024*1024*1024 = 1024MB
+image_alloc = 1073741824 # = 1024*1024*1024 = 1024MB

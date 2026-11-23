@@ -1,0 +1,22 @@
+pkgname="wwal"
+pkgdesc="he last wallpaper engine your Linux desktop will ever need — replaces swww/awww, mpvpaper, linux-wallpaperengine, glpaper, wpaperd & matugen/pywal in one absurdly fast C23 daemon."
+pkgver="3.0.0"
+pkgrel="1"
+
+url="https://github.com/Execorn/wwal"
+license=("GPL-3.0")
+arch=("x86_64")
+
+source=("https://github.com/Execorn/wwal/releases/download/v$pkgver/wwal-v$pkgver-linux-x86_64.tar.gz")
+sha256sums=("SKIP")
+
+depends=("wayland" "wayland-protocols" "libdrm" "mesa" "libva" "liburing" "libseccomp" "libpng" "libjpeg-turbo")
+
+optdepends=(
+	"qt6-base: for wwal-studio"
+	"sqlite3: for wwal-studio"
+)
+
+package() {
+	cp -r $srcdir/usr $pkgdir/
+}

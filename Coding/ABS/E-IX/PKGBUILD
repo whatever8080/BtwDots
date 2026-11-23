@@ -1,13 +1,13 @@
 pkgname="E-IX"
 pkgdesc="单二进制、无 CGO、依赖 内核独立进程。"
-pkgver="1.0.0"
+pkgver="2.0.4"
 pkgrel="1"
 
 license=("custom:none")
 arch=("x86_64")
 
 source=("https://dl.gameddns.com/download/eix-linux-amd64.tar.gz")
-sha256sums=("01a637b683c79016492378e5902c7d72aa6f4aeb49925c3684cf3e0509ad0a92")
+sha256sums=("591fcb7cabf8b1786cf4f2e5ced5bc9980baba4959ad7a1cb7ed90963fca337e")
 
 package() {
 	install -D $srcdir/eix-linux-amd64/eix-cli $pkgdir/usr/bin/eix-cli
@@ -22,7 +22,7 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/eix-cli daemon --transparent
+ExecStart=/usr/bin/eix-cli daemon -transparent -node 'Singapore 03'
 ExecStopPost=/usr/bin/eix-cli down
 Environment=EIX_DATA_DIR=/etc/eix
 Environment=EIX_CORE=/usr/bin/mihomo

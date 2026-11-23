@@ -7,6 +7,7 @@ $env.PROMPT_INDICATOR_VI_INSERT = ':'
 # alias
 alias weather = weathr -s rain -n -l --hide-hud
 alias fdpro = fd --hidden --max-depth 5
+alias tuiba = tuiba ~/.config/tuiba/library
 
 # enviraonment variables
 $env.FNM_MULTISHELL_PATH = "/run/user/1000/fnm_multishells/32644_1777769098481"
